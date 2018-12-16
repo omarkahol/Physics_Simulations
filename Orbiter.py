@@ -20,11 +20,11 @@ class Orbiter:
         r2=self.state[4]
         theta2=self.state[6]
 
-        x1=r1*cos(theta1)
-        y1=r1*sin(theta2)
+        x1=r1*np.cos(theta1)
+        y1=r1*np.sin(theta2)
 
-        x2=r2*cos(theta2)
-        y2=r2*sin(theta2)
+        x2=r2*np.cos(theta2)
+        y2=r2*np.sin(theta2)
 
         return x1, y1, x2, y2
 
@@ -65,12 +65,26 @@ class Orbiter:
 
         return [dr1,ddr1,dtheta1,ddtheta1,dr2,ddr2,dtheta2,ddtheta2]
 
+    def trajectory(self,t):
+        curve=odeint(self.dstate, self.state, np.linspace(0,t,1000))
+        r1=[el[0] for el in curve]
+        theta1=[el[2] for el in curve]
+        r2=[el[4] for el in curve]
+        theta2=[el[6] for el in curve]
+        x1=r1*np.cos(theta1)
+        y1=r1*np.sin(theta2)
+
+        x2=r2*np.cos(theta2)
+        y2=r2*np.sin(theta2)
+
+        return x1, y1, x2, y2
+
     def step(self,dt):
-        self.state=odeint(self.dstate, self.state, [0,dt])[1]
-        print(self.energy())
+        self.state=odeint(self.dstate, self.state, np.linspace(0,dt,10))[-1]
+        
 
 if __name__=='__main__':
-    pd = Orbiter([1000,0,np.pi,0,5000,5,0,5],[1e+12,1],1)
+    pd = Orbiter([1000,0,0,0,7500,0,0,2.5],[1e+12,1],G=1)
     dt=1/360
 
     fig=plt.figure()
@@ -78,6 +92,10 @@ if __name__=='__main__':
     ax.grid()
     line1, = ax.plot([], [], 'ro', lw=2)
     line2, = ax.plot([],[],'bo',lw=2)
+    
+    x1,y1,x2,y2=pd.trajectory(1)
+    ax.plot(x1,y1,'r',lw=0.5)
+    ax.plot(x2,y2,'b',lw=0.5)
 
     def init():
         line1.set_data([],[])
