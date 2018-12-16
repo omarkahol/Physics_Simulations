@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 from math import sin, cos
 import matplotlib.animation as animation
+from time import time
 
 class Orbiter:
     def __init__(self, state, params, G=1e-5):
@@ -11,8 +12,6 @@ class Orbiter:
         #params=[m1,m2]
         self.params=params
         self.G=G
-        print('r1= '+str(self.state[0])+' r2= '+str(self.state[4]))
-        self.initEnergy=self.energy()
 
     def position(self):
         r1=self.state[0]
@@ -57,7 +56,7 @@ class Orbiter:
         m1=self.params[0]
         m2=self.params[1]
 
-        ddr1=r1*(dtheta1**2) - (2*self.G*m2)/((r2-r1)**2)
+        ddr1=r2*(dtheta1**2) - (2*self.G*m2)/((r2-r1)**2)
         ddr2=r2*(dtheta2**2) - (2*self.G*m1)/((r2-r1)**2)
 
         ddtheta1=(-2*dr1*dtheta1)/r1
@@ -80,23 +79,20 @@ class Orbiter:
         return x1, y1, x2, y2
 
     def step(self,dt):
-        self.state=odeint(self.dstate, self.state, np.linspace(0,dt,10))[-1]
+        self.state=odeint(self.dstate, self.state, [0,dt])[-1]
         
 
 if __name__=='__main__':
-    pd = Orbiter([1000,0,0,0,7500,0,0,2.5],[1e+12,1],G=1)
-    dt=1/360
 
+    pd = Orbiter([1000,0,0,0,7500,0,0,2.5],[1e+12,1],G=1)
+    dt=1/120
+   
     fig=plt.figure()
     ax = fig.add_subplot(111, aspect='equal', autoscale_on=False, xlim=(-10000, 10000), ylim=(-10000,10000))
     ax.grid()
     line1, = ax.plot([], [], 'ro', lw=2)
     line2, = ax.plot([],[],'bo',lw=2)
     
-    x1,y1,x2,y2=pd.trajectory(1)
-    ax.plot(x1,y1,'r',lw=0.5)
-    ax.plot(x2,y2,'b',lw=0.5)
-
     def init():
         line1.set_data([],[])
         line2.set_data([],[])
@@ -111,11 +107,10 @@ if __name__=='__main__':
         return line1, line2,
 
 
-    from time import time
     t0 = time()
     animate(0)
     t1 = time()
     interval = 1000 * dt - (t1 - t0)
 
-    ani = animation.FuncAnimation(fig, animate, frames=300, interval=interval, init_func=init, blit=True)
+    ani = animation.FuncAnimation(fig, animate, frames=300, interval=1, init_func=init, blit=True)
     plt.show()
