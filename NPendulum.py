@@ -184,7 +184,7 @@ class NPendulum:
         plt.show()
 
 if __name__ == '__main__':
-    n=10
+    n=5
     pos=[(i-n)**i for i in range(n)]
     vel=[(-1)**i for i in range(n)]
     args=[9.81]+[1 for i in range(2*n)]
