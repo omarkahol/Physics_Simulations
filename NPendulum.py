@@ -184,13 +184,13 @@ class NPendulum:
         plt.show()
 
 if __name__ == '__main__':
-    n=5
+    n=2
     pos=[(i-n)**i for i in range(n)]
-    vel=[(-1)**i for i in range(n)]
+    vel=[(2)**i for i in range(n)]
     args=[9.81]+[1 for i in range(2*n)]
 
     pd=NPendulum(n,pos+vel,args)
-    pd.integrate_and_draw(np.linspace(0,10,200))
+    pd.integrate_and_draw(np.linspace(0,30,1000))
 
 
 
