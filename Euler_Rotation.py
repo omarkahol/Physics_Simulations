@@ -112,18 +112,10 @@ class Object:
             M.set_data([0,mom[0]],[0,mom[1]])
             M.set_3d_properties([0,mom[2]])
 
-            xp=[]
-            yp=[]
-            zp=[]
+            body = np.array([[e1x,e2x,e3x],[e1y,e2y,e3y],[e1z,e2z,e3z]]).dot(np.vstack([xs,ys,zs]))
 
-            for i in range(0,len(xs)):
-                p=np.array([[e1x,e2x,e3x],[e1y,e2y,e3y],[e1z,e2z,e3z]]).dot(np.array([xs[i],ys[i],zs[i]]))
-                xp.append(p[0])
-                yp.append(p[1])
-                zp.append(p[2])
-
-            bd.set_data(xp,yp)
-            bd.set_3d_properties(zp)
+            bd.set_data(body[0],body[1])
+            bd.set_3d_properties(body[2])
 
             return e1,e2,e3,w,bd,M,
 
@@ -137,14 +129,16 @@ class Object:
 
 if __name__=='__main__':
 
-      obj=Object(1,2.5,5,0,0,0,[1e-3,7,0])
+      obj=Object(2,2,4,0,0,0,[6,6,6])
 
       u,v=np.meshgrid(np.linspace(0,pi,10),np.linspace(0,2*pi,20))
       xs=np.hstack(np.sin(u)*np.cos(v))
       ys=np.hstack(np.sin(u)*np.sin(v))
       zs=np.hstack(np.cos(u)/sqrt(3))
 
-      obj.draw(1/120,xs,ys,zs)
+      theta=np.linspace(-10*pi,10*pi,1000)
+
+      obj.draw(1/60,xs,ys,zs)
 
 
 

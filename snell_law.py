@@ -3,27 +3,30 @@ import matplotlib.pyplot as plt
 from math import *
 from scipy.integrate import odeint
 
+nfunc = lambda y: 0.4+abs(sin(4*y)+2*cos(3*y)) if y < 3  else 1
+def df(f,x0,h):
+    return (f(x0+h)-f(x0-h))/(2*h)
+a0=0.5
+n0=1
 x0=0
-y0=0
-xst=-0.5
-theta_0=0.1
-n1=1
-n = lambda y: sqrt(y+1)
-yst=-xst/tan(theta_0)
+y0=5
+state=[a0,x0,y0]
 
-def model(state, t):
-    x, y = state
-    dy=-1
-    dx= tan(asin( (sin(theta_0)*n1) / n(-y) ))
-    return [dx, dy]
+def dstate(state,t):
+    a,x,y=state
+    n = nfunc(y)
+    dx = (1 / n) * sin(a)
+    dy = -(1 / n) * cos(a)
+    da=(1/n)*df(nfunc,y,1e-5)*dx
+    return [da,dx,dy]
 
-sol=odeint(model,[x0,y0],np.linspace(0,20,1000))
-
-x=[el[0] for el in sol]
-y=[el[1] for el in sol]
-fig=plt.figure()
-ax=fig.add_subplot(111,autoscale_on=True)
-ax.plot([xst,x0],[yst,y0],'r-',lw=2)
-ax.plot([min(x+[xst]),max(x)],[y0,y0],'k',lw=1)
-ax.plot(x,y,'r',lw=2)
+t=np.linspace(0,20,100000)
+sol=odeint(dstate,state,t)
+y=[el[2] for el in sol]
+x=[el[1] for el in sol]
+plt.plot(x,y)
 plt.show()
+
+
+
+
