@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9cd084a4-14f9-4e80-a022-e11f24202a93" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Quaternion_Rotation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spherical_snell.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RigidBodyRotation/Force.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RigidBodyRotation/Object.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RigidBodyRotation/QuatPy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RigidBodyRotation/ReferenceFrame.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RigidBodyRotation/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Euler_Rotation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Euler_Rotation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrbiterNewtonianApproach.py" beforeDir="false" afterPath="$PROJECT_DIR$/OrbiterNewtonianApproach.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snell_law.py" beforeDir="false" afterPath="$PROJECT_DIR$/snell_law.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quaternion_Rotation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quaternion_Rotation.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,22 +20,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Quaternion_Rotation.py">
+        <entry file="file://$PROJECT_DIR$/RigidBodyRotation/Object.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2190">
-              <caret line="153" column="24" selection-start-line="153" selection-start-column="24" selection-end-line="153" selection-end-column="24" />
+            <state relative-caret-position="552">
+              <caret line="91" column="13" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snell_law.py">
+        <entry file="file://$PROJECT_DIR$/RigidBodyRotation/QuatPy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+            <state relative-caret-position="420">
+              <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -42,22 +44,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spherical_snell.py">
+        <entry file="file://$PROJECT_DIR$/RigidBodyRotation/Force.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Euler_Rotation.py">
+        <entry file="file://$PROJECT_DIR$/RigidBodyRotation/ReferenceFrame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1920">
-              <caret line="133" column="64" selection-start-line="133" selection-start-column="64" selection-end-line="133" selection-end-column="64" />
+            <state relative-caret-position="12">
+              <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -88,16 +87,23 @@
         <option value="$PROJECT_DIR$/Euler_Roatation_better.py" />
         <option value="$PROJECT_DIR$/QR_rotation_example.py" />
         <option value="$PROJECT_DIR$/Euler_Rotation.py" />
-        <option value="$PROJECT_DIR$/Quaternion_Rotation.py" />
         <option value="$PROJECT_DIR$/snell_law.py" />
         <option value="$PROJECT_DIR$/spherical_snell.py" />
+        <option value="$PROJECT_DIR$/RigidBodyRotation/__init__.py" />
+        <option value="$PROJECT_DIR$/Quaternion_Rotation.py" />
+        <option value="$PROJECT_DIR$/RigidBodyRotation/QuatPy.py" />
+        <option value="$PROJECT_DIR$/RigidBodyRotation/ReferenceFrame.py" />
+        <option value="$PROJECT_DIR$/OrbiterNewtonianApproach.py" />
+        <option value="$PROJECT_DIR$/RigidBodyRotation/Force.py" />
+        <option value="$PROJECT_DIR$/RigidBodyRotation/Object.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="688" />
-    <option name="width" value="1032" />
-    <option name="height" value="1034" />
+    <option name="x" value="714" />
+    <option name="y" value="33" />
+    <option name="width" value="1012" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -111,6 +117,11 @@
             <path>
               <item name="lagrangians_and_hamiltonians" type="b2602c69:ProjectViewProjectNode" />
               <item name="lagrangians_and_hamiltonians" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lagrangians_and_hamiltonians" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lagrangians_and_hamiltonians" type="462c0819:PsiDirectoryNode" />
+              <item name="RigidBodyRotation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -133,8 +144,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.spherical_snell">
-    <configuration name="Euler_Rotation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Object">
+    <configuration name="Force" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lagrangians_and_hamiltonians" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -142,11 +153,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RigidBodyRotation" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Euler_Rotation.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RigidBodyRotation/Force.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -155,7 +166,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Inertia" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Object" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="lagrangians_and_hamiltonians" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RigidBodyRotation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RigidBodyRotation/Object.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="OrbiterNewtonianApproach" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lagrangians_and_hamiltonians" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -167,7 +199,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Inertia.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OrbiterNewtonianApproach.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -197,7 +229,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="snell_law" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ReferenceFrame" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lagrangians_and_hamiltonians" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -205,32 +237,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RigidBodyRotation" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/snell_law.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="spherical_snell" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="lagrangians_and_hamiltonians" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spherical_snell.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RigidBodyRotation/ReferenceFrame.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -241,11 +252,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.spherical_snell" />
-        <item itemvalue="Python.snell_law" />
+        <item itemvalue="Python.Object" />
+        <item itemvalue="Python.OrbiterNewtonianApproach" />
         <item itemvalue="Python.QR_rotation_example" />
-        <item itemvalue="Python.Euler_Rotation" />
-        <item itemvalue="Python.Inertia" />
+        <item itemvalue="Python.Force" />
+        <item itemvalue="Python.ReferenceFrame" />
       </list>
     </recent_temporary>
   </component>
@@ -281,13 +292,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14918292" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14760147" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49973643" weight="0.17248908" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49973643" visible="true" weight="0.17358078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.18995634" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -349,13 +361,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OrbiterNewtonianApproach.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="4" column="21" selection-end-line="5" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sticks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -413,12 +418,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Quaternion_Rotation.py">
+    <entry file="file://$PROJECT_DIR$/snell_law.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2190">
-          <caret line="153" column="24" selection-start-line="153" selection-start-column="24" selection-end-line="153" selection-end-column="24" />
+        <state relative-caret-position="30">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spherical_snell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -433,23 +448,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/snell_law.py">
+    <entry file="file://$PROJECT_DIR$/RigidBodyRotation/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/lib/python3/dist-packages/matplotlib/backends/backend_tkagg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        <state relative-caret-position="327">
+          <caret line="561" selection-start-line="561" selection-end-line="561" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Quaternion_Rotation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1107">
+          <caret line="140" column="19" lean-forward="true" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="80" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spherical_snell.py">
+    <entry file="file://$PROJECT_DIR$/OrbiterNewtonianApproach.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="645">
+          <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RigidBodyRotation/ReferenceFrame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RigidBodyRotation/QuatPy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RigidBodyRotation/Object.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="91" column="13" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RigidBodyRotation/Force.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
         </state>
       </provider>
     </entry>

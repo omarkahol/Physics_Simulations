@@ -47,7 +47,7 @@ class NewtonianOrbit:
         self.state=odeint(self.dstate,self.state,[0,dt])[-1]
 
 if __name__=='__main__':
-    orb = NewtonianOrbit([0,0,0,0,7,-1,np.pi,2.5,   0,0,1,0 ],[1000,1,1])
+    orb = NewtonianOrbit([0,0,0,0,7,0,np.pi,1,   0,0,1,0 ],[1000,1,1])
     dt=1/120
 
     fig=plt.figure()

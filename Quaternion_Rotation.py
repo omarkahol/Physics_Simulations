@@ -1,5 +1,3 @@
-from typing import List, Any, Union
-
 import numpy as np
 from scipy.integrate import odeint
 import  matplotlib.pyplot as plt
@@ -40,7 +38,7 @@ class Quaternion:
 
 class Rotation:
 
-    def __init__(self,a,theta,Io, w):
+    def __init__(self,a,theta,Io, w, N=lambda t : [0,0,0]):
         self.state=[cos(theta/2),*sin(theta/2)*np.array(a)/np.linalg.norm(a)]
         print('Roatation quaternion: '+str(self.base_Quaternion(self.state)))
         self.Io=np.array(Io)
@@ -48,6 +46,8 @@ class Rotation:
         self.get_frame(self.base_Quaternion(self.state))
         print('adding angular velocity w = '+str(w))
         self.add_w(w)
+        self.N=N
+        self.current_time=0
 
     def rotate(self, vector, q):
         return np.array(q.prod(Quaternion(0, vector)).prod(q.inv()).v)
@@ -74,22 +74,24 @@ class Rotation:
     def base_Quaternion(self,state):
         return Quaternion(state[0],state[1:4])
 
-    def dstate(self,state,dt):
+    def dstate(self,state,t):
         beta=self.base_Quaternion(state)
         w1,w2,w3=state[4:7]
         dbeta=beta.prod( Quaternion(0,state[4:7]) ).scale(0.5)
 
         I1, I2, I3 = self.Io
 
-        dw1 = w2 * w3 * (I2 - I3) / I1
-        dw2 = w1 * w3 * (I3 - I1) / I2
-        dw3 = w1 * w2 * (I1 - I2) / I3
+        dw1 = (w2 * w3 * (I2 - I3) / I1) + self.N(self.current_time)[0]/I1
+        dw2 = (w1 * w3 * (I3 - I1) / I2) + self.N(self.current_time)[1]/I2
+        dw3 = (w1 * w2 * (I1 - I2) / I3) + self.N(self.current_time)[2]/I3
 
         return [dbeta.s,*dbeta.v,dw1,dw2,dw3]
 
     def step(self,dt):
         self.state=odeint(self.dstate,self.state,[0,dt])[-1]
         self.get_frame(self.base_Quaternion(self.state))
+        self.current_time += dt
+
 
     def draw_ellipsoid(self,n1,n2,dt):
         a = 1 / sqrt(self.Io[0])
@@ -152,7 +154,8 @@ class Rotation:
         plt.show(ani)
 
 if __name__=='__main__':
-    r=Rotation(np.array([1,1,5]), 0, [2,2,1], [3,3,0])
-    r.draw_ellipsoid(10,20,1/60)
+
+    r=Rotation(np.array([1,1,5]), 0, [1,2,3], [0,1,0], N=lambda t:[0,0,0])
+    r.draw_ellipsoid(20,20,1/30)
 
 
